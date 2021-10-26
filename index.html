@@ -53,6 +53,31 @@
           </a>
         </div>
       </section>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js'></script>
+      <script id="rendered-js" >
+$('section.awSlider .carousel').carousel({
+  pause: "hover",
+  interval: 2000 });
+
+
+var startImage = $('section.awSlider .item.active > img').attr('src');
+$('section.awSlider').append('<img src="' + startImage + '">');
+
+$('section.awSlider .carousel').on('slid.bs.carousel', function () {
+  var bscn = $(this).find('.item.active > img').attr('src');
+  $('section.awSlider > img').attr('src', bscn);
+});
+
+
+/* 
+Philips ambilight tv
+Üzerine gleince duruyor slide
+*/
+//# sourceURL=pen.js
+    </script>
       
 </body>
 </html>
